@@ -71,8 +71,3 @@ Things I Need:
   - grid_size (must be odd number)
   - Actual grid
 4. Generate path from bot coords to princess coords
-
-Step 1:
-- Make a grid using the inputs N and an NxN ascii grid. This NxN grid is a user input string with line breaks indicated by '\n'
-- Locate the princess on the grid. Confirm she is in a corner.
-- Locate bot on grid. Make sure it is in the center.
