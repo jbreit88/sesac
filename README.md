@@ -51,7 +51,7 @@ A description of the problem can be found [here](https://www.hackerrank.com/chal
 1. From the `bot_saves_princess` directory run `$ ruby ./lib/runner.rb` to start the program.
   - The user is met with a prompt to input information: 
   
-  ```ruby
+  ```
   "Please input a whole, odd number greater than 3 and less than 100 for a grid size." 
   ```
   
@@ -59,7 +59,7 @@ A description of the problem can be found [here](https://www.hackerrank.com/chal
 
 2. Upon success input of a grid size, the user is asked to input their grid one row at a time. 
 
-```ruby
+```
 Please enter '-' for empty space, 'm' for the bot, and 'p' for princess.
 Be sure your input matches your grid size.
 Row number 1 of 3:
@@ -70,7 +70,7 @@ Row number 1 of 3:
 
 3. Once the user has provided a valid grid size and grid setup, the program finds the position of the bot, the position of the princess, and maneuvers the bot through to the princess in the fewest moves possible, then prints the path taken one step at a time in the terminal.
 
-```ruby
+```
 Please input a whole, odd number greater than 3 and less than 100 for a grid size.
 3
 Please enter '-' for empty space, 'm' for the bot, and 'p' for princess.
