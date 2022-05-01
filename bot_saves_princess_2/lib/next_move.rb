@@ -13,7 +13,7 @@ class NextMove
       puts "Here is your bot's full move history:"
 
       bot.move_history.each { |move| puts move}
-      return
+      return bot.move_history
     end
 
     puts "Would you like to see the bot's next move? Y/n:"
@@ -51,7 +51,7 @@ class NextMove
       puts "Here is your bot's full move history:"
 
       bot.move_history.each { |move| puts move}
-      return
+      return bot.move_history
     end
   end
 
