@@ -2,7 +2,7 @@ require 'matrix'
 require 'enumerator'
 
 class PathToPrincess
-  
+
   def self.displayPathtoPrincess(n,grid)
     matrix = grid_to_matrix(n, grid)
     princess_coords = find_princess(matrix)
@@ -41,7 +41,7 @@ class PathToPrincess
     # Check user input is greater than 2, less than 100, odd, and an integer
     until m.integer? && m.odd? && m >= 3 && m < 100
       puts 'That is not a whole, odd number.'
-      puts 'Please input an whole, odd number greater than 3 and less than 100 for a grid size.'
+      puts 'Please input a whole, odd number greater than 3 and less than 100 for a grid size.'
       m = user_input.to_i
     end
 
