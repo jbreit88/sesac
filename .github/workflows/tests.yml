@@ -17,6 +17,9 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['2.7.4']
+    defaults:
+      run:
+        working-directory: ./bot_saves_princess
 
     steps:
     - uses: actions/checkout@v2
@@ -27,7 +30,5 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: install dependencies
       run: gem install rspec
-    - name: change working folder
-      run: cd ./bot_saves_princess
     - name: Run RSpec Princess 1
       run: rspec
