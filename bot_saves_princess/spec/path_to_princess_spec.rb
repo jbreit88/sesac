@@ -1,6 +1,7 @@
 require 'path_to_princess'
 
 RSpec.describe PathToPrincess do
+  # Remove terminal print out during tests.
   before(:each) do
     allow($stdout).to receive(:write)
   end
@@ -37,18 +38,12 @@ RSpec.describe PathToPrincess do
 
   describe 'make_grid' do
     it 'takes in grid size from #get_user_inputs, has user input a grid and checks grid validity before returning the bot path to princess' do
-
-      user_input = 3
-
       allow(PathToPrincess).to receive(:gets).and_return('---', '-m-', 'p--')
 
       expect(PathToPrincess.make_grid(3)).to eq(["DOWN", "LEFT"])
     end
 
     it 'dynamically adjusts for grid size and user input' do
-
-      user_input = 5
-
       allow(PathToPrincess).to receive(:gets).and_return('-----', '-----', '--m--', '-----', 'p----')
 
       expect(PathToPrincess.make_grid(5)).to eq(["DOWN", "DOWN", "LEFT", "LEFT"])
@@ -148,7 +143,7 @@ RSpec.describe PathToPrincess do
       end
     end
 
-    describe 'corners' do
+    describe 'find_center_coords' do
       it 'returns the center coordinates for the grid size 3' do
         expect(PathToPrincess.find_center_coords(3)).to eq([1,1])
       end
