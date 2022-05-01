@@ -11,7 +11,7 @@ on:
   pull_request:
 
 jobs:
-  test_1:
+  test-bsp-1:
 
     runs-on: ubuntu-latest
     strategy:
@@ -20,6 +20,28 @@ jobs:
     defaults:
       run:
         working-directory: ./bot_saves_princess
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: install dependencies
+      run: gem install rspec
+    - name: Run RSpec Princess 1
+      run: rspec
+
+  test-bsp-2:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['2.7.4']
+    defaults:
+      run:
+        working-directory: ./bot_saves_princess_2
 
     steps:
     - uses: actions/checkout@v2
