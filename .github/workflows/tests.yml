@@ -27,5 +27,9 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: install dependencies
       run: gem install rspec
-    - name: Run RSpec
+    - name: Run RSpec Princess 1
+      run: cd ./bot_saves_princess
+      run: rspec
+    - name: Run RSpec Princess 2
+      run: cd ./bot_saves_princess_2
       run: rspec
