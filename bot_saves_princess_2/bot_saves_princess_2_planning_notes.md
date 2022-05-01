@@ -26,3 +26,5 @@ Need to do:
     - Check bot and princess are not same spot
     - check bot coords are the same as where it is in grid string
     - use same movement logic from bot-save-princess-1, but only print one movement instead of entire thing.
+
+* Note: there is no need for the grid to be made of only odd numbers now. 
