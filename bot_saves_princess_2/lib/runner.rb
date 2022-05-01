@@ -1,6 +1,6 @@
-require_relative 'path_to_princess'
+require_relative 'next_move'
 
-# Navigate to file directory: sesac/bot_saves_princess
+# Navigate to file directory: sesac/bot_saves_princess_2
 # Run this file in console:
 # `$ ruby ./lib/runner.rb`
-PathToPrincess.get_user_inputs
+NextMove.get_user_inputs
