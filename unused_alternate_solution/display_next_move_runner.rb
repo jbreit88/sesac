@@ -1,7 +1,7 @@
-require_relative 'princess'
-require_relative 'path'
-require_relative 'bot'
-require_relative 'grid'
+require './lib/princess'
+require './lib/path'
+require './lib/bot'
+require './lib/grid'
 
 def nextMove(n,r,c,grid)
   Path.nextMove(n,r,c,grid)

@@ -4,7 +4,6 @@ require_relative 'princess'
 
 class Path
   def self.displayPathtoPrincess(n, grid)
-
     grid = Grid.new(n, grid.join)
     bot = Bot.new(grid.bot_coords)
     princess = Princess.new(grid.princess_coords)
@@ -26,7 +25,6 @@ class Path
     end
 
     bot.move_history.each { |move| puts move }
-    return bot.move_history
   end
 
   def self.nextMove(n, r, c, grid)
@@ -42,18 +40,21 @@ class Path
     if bot.r < princess.r
       bot.update_move_history('DOWN')
       bot.update_coords([bot.r + 1, bot.c])
+      grid.update_board([bot.r, bot.c])
     elsif bot.r > princess.r
       bot.update_move_history('UP')
       bot.update_coords([bot.r - 1, bot.c])
+      grid.update_board([bot.r, bot.c])
     elsif bot.c < princess.c
       bot.update_move_history('RIGHT')
       bot.update_coords([bot.r, bot.c + 1])
+      grid.update_board([bot.r, bot.c])
     elsif bot.c > princess.c
       bot.update_move_history('LEFT')
       bot.update_coords([bot.r, bot.c - 1])
+      grid.update_board([bot.r, bot.c])
     end
 
     puts bot.move_history.last
-    return bot.move_history.last
   end
 end

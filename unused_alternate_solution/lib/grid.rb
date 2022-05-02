@@ -4,7 +4,8 @@ require 'matrix'
 class Grid
 
   attr_reader :size,
-              :board
+              :board,
+              :matrix
 
   def initialize(size, grid_string)
     @size   = size
@@ -30,5 +31,14 @@ class Grid
 
   def bot_coords
     @matrix.find_index('m')
+  end
+
+  def update_board(new_bot_coords)
+    find_current_bot = @matrix.find_index('m')
+    
+    @matrix[find_current_bot[0], find_current_bot[1]] = '-'
+    @matrix[new_bot_coords[0], new_bot_coords[1]] = 'm'
+
+    @board = @matrix.to_a
   end
 end
