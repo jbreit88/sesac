@@ -217,6 +217,7 @@ As you look through my project, you will find a directory titled `unused_alterna
 There are many positives to setting the code up this way:
 1. When asked to add a `nextMove` function for `bot_saves_princess_2`, the logic would have already been in place from generating the bot's path in the first problem, and so would have been easy to update.
 2. By breaking everything into separate classes, we are better able to maintain SRP in our nextMove and pathToPrincess methods. Those methods in theory should only print the path to princess to the terminal, or print the next move to the terminal and update the relevant information, however, as it stands, nextMove takes in some extra user input and has three possible branches for resolving the function (user says yes and prints a new move, user says no and terminates the function, or the bot has found the princess and that is printed to the termianl).
+3. I think it would also help with the overall readability of the code.
 
 Overall I feel like breaking things out into their separate classes would be a positive refactor for this project and given a little more time that would be my next move.
 
