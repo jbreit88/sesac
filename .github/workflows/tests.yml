@@ -19,7 +19,7 @@ jobs:
         ruby-version: ['2.7.4']
     defaults:
       run:
-        working-directory: ./bot_saves_princess
+        working-directory: ./bot_saves_princess_1
 
     steps:
     - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: install dependencies
       run: gem install rspec
-    - name: Run RSpec Princess 1
+    - name: Run RSpec
       run: rspec
 
   test-bsp-2:
@@ -52,5 +52,27 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: install dependencies
       run: gem install rspec
-    - name: Run RSpec Princess 2
+    - name: Run RSpec
+      run: rspec
+
+  test-bsp:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['2.7.4']
+    defaults:
+      run:
+        working-directory: ./bot_saves_princess
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: install dependencies
+      run: gem install rspec
+    - name: Run RSpec
       run: rspec
