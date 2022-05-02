@@ -18,7 +18,7 @@ This project contains my solutions to the HackerRank ['Bot Saves Princess'](http
 
 ## Versions and Dependencies
 
-- Ruby 2.7.2
+- Ruby 2.7.4
 
 - [pry 0.14.1](https://github.com/pry/pry)
 - [rspec 3.11.0](https://github.com/rspec/rspec-metagem)
