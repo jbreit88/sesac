@@ -116,11 +116,11 @@ With all that being said, below are instruction for running the code and the fil
 
   A description of the problem can be found [here](https://www.hackerrank.com/challenges/saveprincess) or in the `bot_saves_princess_task.md`.
 
-  *The `bot_saves_princess_planning_notes.md` file contains my brainstroming notes if you would like to see my thoguht process for developing the solution.*
+  *The `bot_saves_princess_1_planning_notes.md` file contains my brainstroming notes if you would like to see my thoguht process for developing the solution.*
 
   ### Running the File:
 
-  1. From the `bot_saves_princess` directory run `$ ruby ./lib/runner.rb` to start the program.
+  1. From the `bot_saves_princess_1` directory run `$ ruby ./lib/runner.rb` to start the program.
     - The user is met with a prompt to input information: 
 
   ```
@@ -138,7 +138,7 @@ With all that being said, below are instruction for running the code and the fil
   ```
 
   - The number of rows required scales with the user grid size input.
-  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
+  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that no characters besides the princess('p'), the bot('m'), and empty space ('-') have been used. 
 
   3. Once the user has provided a valid grid size and grid setup, the program finds the position of the bot, the position of the princess, and maneuvers the bot through to the princess in the fewest moves possible, then prints the path taken one step at a time in the terminal.
 
@@ -209,7 +209,7 @@ With all that being said, below are instruction for running the code and the fil
   ```
 
   - The number of rows required scales with the user grid size input.
-  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
+  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that no characters besides the princess('p'), the bot('m'), and empty space ('-') have been used. 
 
   4. Once the user has provided a valid grid size and grid setup, the program uses the position of the bot and the position of the princess to maneuver the bot towards the princess pne move at a time. The user is prompted is they want to see the bot's next move. The user can select `y` for 'Yes' or `n` for 'No'. Yes leads the terminal to print out the bot's next move and prompt the user again if they would like to see the next move. This continues until the user selects 'No' or the bot finds the princess. The final output to the terminal is the entire movement history of the bot in its journey to find the princess:
 
