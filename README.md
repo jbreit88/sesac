@@ -123,11 +123,11 @@ With all that being said, below are instruction for running the code and the fil
   1. From the `bot_saves_princess` directory run `$ ruby ./lib/runner.rb` to start the program.
     - The user is met with a prompt to input information: 
 
-    ```
-    "Please input a whole, odd number greater than 3 and less than 100 for a grid size." 
-    ```
+  ```
+  "Please input a whole, odd number greater than 3 and less than 100 for a grid size." 
+  ```
 
-    - Error handling in place takes in the user input and if it is not an integer, or not an odd number between 2 and 100, the user is asked to repeat the action until a valid input is achieved.
+  - Error handling in place takes in the user input and if it is not an integer, or not an odd number between 2 and 100, the user is asked to repeat the action until a valid input is achieved.
 
   2. Upon successful input of a grid size, the user is asked to input their grid one row at a time. 
 
@@ -137,8 +137,8 @@ With all that being said, below are instruction for running the code and the fil
   Row number 1 of 3:
   ```
 
-    - The number of rows required scales with the user grid size input.
-    - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
+  - The number of rows required scales with the user grid size input.
+  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
 
   3. Once the user has provided a valid grid size and grid setup, the program finds the position of the bot, the position of the princess, and maneuvers the bot through to the princess in the fewest moves possible, then prints the path taken one step at a time in the terminal.
 
@@ -158,12 +158,12 @@ With all that being said, below are instruction for running the code and the fil
   LEFT
   ```
 
-  <details>
-    <summary>Application Example GIF</summary>
+<details>
+  <summary>Application Example GIF</summary>
 
-    ![ezgif-4-b2a6ea5832](https://user-images.githubusercontent.com/88853324/166065436-9bec91f2-f9dd-4a59-a9ca-38dfffb4b57a.gif)
+  ![ezgif-4-b2a6ea5832](https://user-images.githubusercontent.com/88853324/166065436-9bec91f2-f9dd-4a59-a9ca-38dfffb4b57a.gif)
 
-  </details>
+</details>
   
 </details>
 
@@ -184,11 +184,11 @@ With all that being said, below are instruction for running the code and the fil
   1. From the `bot_saves_princess_2` directory run `$ ruby ./lib/runner.rb` to start the program.
     - The user is met with a prompt to input information (different than the above solution because the requirements for a valid grid are different): 
 
-    ```
-    "Please input a whole number greater than 1 and less than 100 for a grid size." 
-    ```
+  ```
+  "Please input a whole number greater than 1 and less than 100 for a grid size." 
+  ```
 
-    - Error handling in place takes in the user input and if it is not an integer between 1 and 100, the user is asked to repeat the action until a valid input is achieved.
+  - Error handling in place takes in the user input and if it is not an integer between 1 and 100, the user is asked to repeat the action until a valid input is achieved.
 
   2. Upon successful input of a grid size, the user is asked to input their desired coordinates for their bot: 
 
@@ -208,8 +208,8 @@ With all that being said, below are instruction for running the code and the fil
   Row number 1 of 3:
   ```
 
-    - The number of rows required scales with the user grid size input.
-    - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
+  - The number of rows required scales with the user grid size input.
+  - Error handling in place checks that the grid size is correct, that there is only one princess and she has been appropriately placed in a corner, that there is only one bot and it has been appropriately placed in the center, and that not characters besides the princess('p'), the bot('m'), and empty space ('-') ahve been used. 
 
   4. Once the user has provided a valid grid size and grid setup, the program uses the position of the bot and the position of the princess to maneuver the bot towards the princess pne move at a time. The user is prompted is they want to see the bot's next move. The user can select `y` for 'Yes' or `n` for 'No'. Yes leads the terminal to print out the bot's next move and prompt the user again if they would like to see the next move. This continues until the user selects 'No' or the bot finds the princess. The final output to the terminal is the entire movement history of the bot in its journey to find the princess:
 
