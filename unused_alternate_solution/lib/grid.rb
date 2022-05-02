@@ -6,24 +6,29 @@ class Grid
   attr_reader :size,
               :board
 
-  def initialize(size, input)
+  def initialize(size, grid_string)
     @size   = size
-    @board  = input
+    @board  = to_matrix_array(grid_string)
     @matrix = to_matrix
   end
 
-  def to_matrix
+  # Takes in the user input grid_string and creates a 2D nested array.
+  def to_matrix_array(grid_string)
     nested_array = []
-    @board.gsub(/\n/, '').chars.each_slice(@size) { |e| nested_array << e }
+    grid_string.gsub(/\n/, '').chars.each_slice(@size) { |e| nested_array << e }
 
-    matrix = Matrix[*nested_array]
+    nested_array
   end
 
-  def locate_princess
+  def to_matrix
+    matrix = Matrix[*@board]
+  end
+
+  def princess_coords
     @matrix.find_index('p')
   end
 
-  def locate_bot
+  def bot_coords
     @matrix.find_index('m')
   end
 end
